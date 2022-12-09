@@ -1,6 +1,6 @@
 <?php
 
-class App
+class Router
 {
     protected $controller = "home";
     protected $method = "index";

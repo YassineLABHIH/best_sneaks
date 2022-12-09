@@ -1,6 +1,6 @@
 <?php
 
-include "../app/core/controller.php";
-include "../app/core/database.php";
-include "../app/core/functions.php";
-include "../app/core/app.php";
+include "../app/core/Controller.php";
+include "../app/core/Database.php";
+include "../app/core/Functions.php";
+include "../app/core/Router.php";

@@ -1,1 +1,3 @@
-MVC POO e-shop without frameworks. "Best Sneaks".
+<?php
+session_start();
+include "../app/init.php";

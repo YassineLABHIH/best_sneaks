@@ -3,7 +3,8 @@ class Home extends Controller
 {
     public function index()
     {
-        $this->view("eshop/index");
+        $data['page_title'] = "Home";
+        $this->view("eshop/index",$data);
     }
 
 }

@@ -8,7 +8,7 @@ class Router
 
     public function __construct()
     {
-        $url = $this->parseURL();
+        $url = $this->parse_url();
         
         if(file_exists("../app/controllers/" . strtolower($url[0]) . ".php" ))
         {
@@ -32,7 +32,7 @@ class Router
         call_user_func_array([$this->controller,$this->method], $this->params);
     }
 
-    private function parseURL()
+    private function parse_url()
     {
         $url = isset($_GET['url']) ? $_GET['url'] : "home";
         return explode("/", filter_var(trim($url, "/"), FILTER_SANITIZE_URL));

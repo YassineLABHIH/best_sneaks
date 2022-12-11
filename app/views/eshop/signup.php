@@ -1,16 +1,17 @@
 <?php $this->view("header", $data); ?>
 
-    <form method="post">
+        
     <section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
+						<form method="POST">
+							<input name="name" type="text" placeholder="Name"/>
+							<input name="email" type="email" placeholder="Email Address"/>
+							<input name="password" type="password" placeholder="Password"/>
+                            <input name="password2" type="password" placeholder="Confirmer votre mot de passe"/>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
@@ -18,6 +19,5 @@
 			</div>
 		</div>
 	</section><!--/form-->
-    </form>
 	
 	<?php $this->view("footer",$data); ?>

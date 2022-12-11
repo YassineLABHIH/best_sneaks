@@ -7,6 +7,9 @@ define("WEBSITE_TITLE", 'Best sneaks');
 define('DB_NAME', "bestsneaks_db");
 define('DB_USER', "root");
 define('DB_PASS', "");
+define('DB_TYPE', "mysql");
+define('DB_HOST', "localhost");
+
 
 define('THEME', 'eshop/');
 

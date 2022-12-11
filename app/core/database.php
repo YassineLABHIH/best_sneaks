@@ -2,8 +2,12 @@
 
 class Database
 {
+    /*
+    *
+    * This is the Database class
+    */
     public static $con;
-
+    
     public function __construct()
     {
         try {
@@ -20,10 +24,47 @@ class Database
             return self::$con;
 
         }
-        $a = new self;
-        return self::$con;
+        return $instance = new self;
+        
     }
 
-}
+    /*
+    *
+    * read from database
+    */
+    public function read($query,$data = array())
+    {
+        $stm = self::$con->prepare($query);
+        $result = $stm->execute($data);
 
-$db = Database::getInstance();
+        if($result)
+        {
+            $data = $stm->fetchAll(PDO::FETCH_OBJ);
+            if(is_array($data))
+            {
+                return $data;
+
+            }
+        }
+
+        return false;
+    }
+
+     /*
+    *
+    * write to database
+    */
+     public function write($query,$data = array())
+     {
+        $stm = self::$con->prepare($query);
+        $result = $stm->execute($data);
+
+        if($result)
+        {
+        
+                return true;
+        }
+
+        return false;
+     }
+}

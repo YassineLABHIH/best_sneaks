@@ -8,6 +8,8 @@ define('DB_NAME', "bestsneaks_db");
 define('DB_USER', "root");
 define('DB_PASS', "");
 
+define('THEME', 'eshop/');
+
 
 //define debug mode
 define('DEBUG', true);

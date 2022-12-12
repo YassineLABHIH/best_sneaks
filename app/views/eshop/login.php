@@ -8,16 +8,17 @@
 						<h2>Login to your account</h2>
 						<?php check_signup_message() ?>
 						<form method="POST">
-							<input type="email" name="email" placeholder="Email" />
-							<input type="password" name="password" placeholder="Password" />
-							<span>
-								<input type="checkbox" class="checkbox"> 
-								Keep me signed in
-							</span>
+							<!--/php to not lose the name and email fields when submitting-->
+							<input type="email" name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : ""; ?>" placeholder="Email" />
+							<input type="password" name="password" value="<?= isset($_POST['password']) ? $_POST['password'] : ""; ?>" placeholder="Password" />
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 						<br>
-						 <p>Vous n'avez pas de compte ? <a href="<?=ROOT?>signup">S'inscrire ici</a></p>
+						 <p class="">Vous n'avez pas de compte ? <a href="<?=ROOT?>signup">S'inscrire ici</a></p>
+
+						 <div class="text-center text-danger">
+							<?php check_error() ?>
+							</div>
 					</div><!--/login form-->
 				</div>
 			</div>

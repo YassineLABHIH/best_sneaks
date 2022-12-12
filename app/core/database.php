@@ -62,7 +62,7 @@ class Database
         if($result)
         {
         
-                return true;
+            return true;
         }
 
         return false;

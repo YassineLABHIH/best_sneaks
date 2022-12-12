@@ -12,6 +12,7 @@
 							<input name="email" type="email" placeholder="Email Address"/>
 							<input name="password" type="password" placeholder="Password"/>
                             <input name="password2" type="password" placeholder="Confirmer votre mot de passe"/>
+							<?php check_error() ?>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->

@@ -6,9 +6,10 @@
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
+						<?php check_signup_message() ?>
+						<form method="POST">
+							<input type="email" name="email" placeholder="Email" />
+							<input type="password" name="password" placeholder="Password" />
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in

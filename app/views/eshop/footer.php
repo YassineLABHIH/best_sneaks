@@ -91,6 +91,9 @@
 								<li><a href="#">Order Status</a></li>
 								<li><a href="#">Change Location</a></li>
 								<li><a href="#">FAQ’s</a></li>
+								<?php if(isset($_SESSION['rank']) && $_SESSION['rank'] == 'admin'): ?>
+									<li><a href="<?= ROOT ?>admin">Admin</a></li>
+								<?php endif; ?>
 							</ul>
 						</div>
 					</div>

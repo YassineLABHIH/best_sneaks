@@ -123,6 +123,7 @@ class User
       {
         $_SESSION['user_url'] = $result[0]->url_adresse;
         $_SESSION['name'] = $result[0]->name;
+        $_SESSION['rank'] = $result[0]->rank;
         header("Location:".ROOT."home");
         die;
       }else{

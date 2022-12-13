@@ -122,7 +122,9 @@ class User
       if(count($result) > 0)
       {
         $_SESSION['user_url'] = $result[0]->url_adresse;
+        $_SESSION['email'] = $result[0]->email;
         $_SESSION['name'] = $result[0]->name;
+        $_SESSION['date'] = date("d-m-Y", strtotime($result[0]->date));
         $_SESSION['rank'] = $result[0]->rank;
         header("Location:".ROOT."home");
         die;
@@ -177,6 +179,7 @@ class User
       if(isset($_SESSION['user_url']))
       {
         unset($_SESSION['user_url']);
+        unset($_SESSION['rank']);
         header("Location:".ROOT."home");
         die;
       }

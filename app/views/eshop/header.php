@@ -13,6 +13,8 @@
     <link href="<?= ASSETS . THEME ?>css/animate.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/main.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/responsive.css" rel="stylesheet">
+	<link href="<?= ASSETS . THEME ?>css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
     <!--[if lt IE 9]>
     <script src="<?= ASSETS . THEME ?>js/html5shiv.js"></script>
     <script src="<?= ASSETS . THEME ?>js/respond.min.js"></script>
@@ -89,7 +91,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<?php if(isset($_SESSION['rank']) && $_SESSION['rank'] == 'admin'): ?>
+								<?php if(isset($_SESSION['name'])): ?>
 									<li><a href="<?=ROOT?>profil"><i class="fa fa-user"></i> Account</a></li>
 								<?php endif; ?>	
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>

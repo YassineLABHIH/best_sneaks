@@ -3,6 +3,10 @@ class Admin extends Controller
 {
     public function index()
     {
+
+        if($_SESSION['rank'] != 'admin') {
+            header("Location:".ROOT."home");
+        }
         
         $User = $this->load_model('User');
 

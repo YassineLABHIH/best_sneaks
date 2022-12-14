@@ -1,9 +1,5 @@
 <?php 
 
-if($_SESSION['is_connect'] == false) {
-    header("Location:".ROOT."home");
-}
-
 $this->view("header", $data); ?>
 
 <div class="container">

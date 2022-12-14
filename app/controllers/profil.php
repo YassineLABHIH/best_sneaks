@@ -3,6 +3,10 @@ class Profil extends Controller
 {
     public function index()
     {
+
+        if($_SESSION['is_connect'] == false) {
+            header("Location:".ROOT."home");
+        }
         
         $User = $this->load_model('User');
 
